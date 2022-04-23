@@ -5,10 +5,15 @@ import styles from '../styles/styles.module.css'
 import noImage from '../assets/no-image.jpg';
 
 
-export const ProductImage = ({ img = '' }) => {
+export interface ProductImageProps {
+    img?: String,
+    className?: String
+}
+
+export const ProductImage = ({ img = '', className }: ProductImageProps) => {
 
     const { product } = useContext(ProductContext);
-    let imgToShow: string;
+    let imgToShow: String;
 
     if (img) {
         imgToShow = img;
@@ -20,6 +25,6 @@ export const ProductImage = ({ img = '' }) => {
 
 
     return (
-        <img className={styles.productImg} src={imgToShow} alt="Product" />
+        <img className={`${styles.productImg} ${className}`} src={`${imgToShow}`} alt="Product" />
     );
 }

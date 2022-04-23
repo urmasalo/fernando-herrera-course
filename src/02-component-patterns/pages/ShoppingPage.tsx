@@ -1,4 +1,5 @@
 import { ProductCard, ProductImage, ProductTitle, ProductButtons } from '../components';
+import '../styles/custom-styles.css'
 
 
 const product = {
@@ -11,7 +12,7 @@ const product = {
 
 export const ShoppingPage = () => {
     return (
-        <div>
+        <div >
             <h1>Shopping Store</h1>
             <hr />
 
@@ -21,16 +22,45 @@ export const ShoppingPage = () => {
                 flexWrap: 'wrap'
             }}>
 
-                <ProductCard product={product}>
-                    <ProductCard.Image />
-                    <ProductCard.Title title={'Hola Mundo'} />
-                    <ProductCard.Buttons />
+                <ProductCard
+                    className="bg-dark text-white"
+                    product={product}>
+                    <ProductCard.Image className="custom-image" />
+                    <ProductCard.Title
+                        className="text-bold"
+                        activeClass="hooliwis"
+                        title={'Hola Mundo'} />
+                    <ProductCard.Buttons className="custom-buttons" />
                 </ProductCard>
 
-                <ProductCard product={product}>
-                    <ProductImage />
-                    <ProductTitle />
-                    <ProductButtons />
+                <ProductCard
+                    product={product}
+                    className="bg-dark text-white"
+                >
+                    <ProductImage className="custom-image" />
+                    <ProductTitle
+                        activeClass="hooliwis"
+                        className="text-bold" />
+                    <ProductButtons className="custom-buttons" />
+                </ProductCard>
+
+                <ProductCard
+                    style={{
+                        background: '#70D1F8'
+                    }}
+                    product={product}
+                >
+                    <ProductImage className="custom-image" />
+                    <ProductTitle
+                        className="text-bold"
+                        style={{
+                            color: 'red'
+                        }} />
+                    <ProductButtons
+                        className="custom-buttons"
+                        style={{
+                            backgroundColor: 'pink'
+                        }} />
                 </ProductCard>
             </div>
         </div>
