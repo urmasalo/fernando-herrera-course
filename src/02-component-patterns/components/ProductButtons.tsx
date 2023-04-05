@@ -17,7 +17,7 @@ export const ProductButtons = ({ className, style }: ProductButtonsProps) => {
             className={`${styles.buttonsContainer} ${className}`}
             style={style}>
             <button
-                className={styles.buttonMinus}
+                className={styles.buttonMenus}
                 onClick={() => increaseBy(-1)}> - </button>
 
             <div className={styles.countLabel}> {counter} </div>

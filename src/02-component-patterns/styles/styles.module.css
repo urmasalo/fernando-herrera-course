@@ -25,7 +25,7 @@
     flex-direction: row;
 }
 
-.buttonMinus {
+.buttonMenus {
     cursor: pointer;
     background-color: transparent;
     border: 1px solid black;
@@ -34,7 +34,7 @@
     width: 30px;
 }
 
-.buttonMinus:hover {
+.buttonMenus:hover {
     background-color: rgba(0, 0, 0, 0.1);
 }
 
